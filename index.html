@@ -3,41 +3,103 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LimitedIO — small, free, open-source software</title>
-<meta name="description" content="LimitedIO makes small, free, open-source software: Linux fixes, Android TV apps and more.">
+<title>LimitedIO – Free Open-Source Software for Linux &amp; Android TV</title>
+<meta name="description" content="LimitedIO builds small, free, open-source software: aicswitch fixes AIC8800 WiFi 6 / Bluetooth USB dongles on Linux, PipeTv is an ad-free YouTube client for Android TV.">
+<meta name="author" content="LimitedIO">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f2e8cf" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#172226" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://limitedio.github.io/">
+<link rel="icon" href="assets/favicon.ico" sizes="48x48"><link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:type" content="website"><meta property="og:site_name" content="LimitedIO">
+<meta property="og:title" content="LimitedIO – Free Open-Source Software">
+<meta property="og:description" content="Small, free, open-source software: aicswitch (Linux WiFi/Bluetooth dongle fix) and PipeTv (ad-free YouTube for Android TV).">
+<meta property="og:url" content="https://limitedio.github.io/">
+<meta property="og:image" content="https://limitedio.github.io/assets/social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LimitedIO – small, free, open-source software"><meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LimitedIO – Free Open-Source Software">
+<meta name="twitter:description" content="aicswitch for Linux and PipeTv for Android TV. Free, open source, no tracking.">
+<meta name="twitter:image" content="https://limitedio.github.io/assets/social.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://limitedio.github.io/#org","name":"LimitedIO","url":"https://limitedio.github.io/","logo":"https://limitedio.github.io/assets/logo-512.png","sameAs":["https://github.com/LimitedIO"]},
+{"@type":"WebSite","@id":"https://limitedio.github.io/#site","url":"https://limitedio.github.io/","name":"LimitedIO","publisher":{"@id":"https://limitedio.github.io/#org"},"inLanguage":"en"},
+{"@type":"WebPage","@id":"https://limitedio.github.io/#page","url":"https://limitedio.github.io/","name":"LimitedIO – Free Open-Source Software","isPartOf":{"@id":"https://limitedio.github.io/#site"},"about":{"@id":"https://limitedio.github.io/#org"}},
+{"@type":"ItemList","itemListElement":[
+{"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"aicswitch","applicationCategory":"UtilitiesApplication","operatingSystem":"Linux","url":"https://limitedio.github.io/aicswitch/","codeRepository":"https://github.com/LimitedIO/aicswitch","description":"Fixes AIC8800 / AIC8800D80 WiFi 6 and Bluetooth USB dongles on Linux that appear as a mass-storage device.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://limitedio.github.io/#org"}}},
+{"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"PipeTv","applicationCategory":"MultimediaApplication","operatingSystem":"Android TV, Google TV, Fire TV","url":"https://limitedio.github.io/PipeTv/","codeRepository":"https://github.com/LimitedIO/PipeTv","description":"Ad-free YouTube client for Android TV with no account, no Google services and SponsorBlock built in.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://limitedio.github.io/#org"}}}]}
+]}
+</script>
 <style>
-:root{--bg:#f2e8cf;--fg:#264653;--muted:#4f6b75;--card:#fbf6ea;--line:#e0d3b4;--accent:#e76f51}
-@media(prefers-color-scheme:dark){:root{--bg:#172226;--fg:#f2e8cf;--muted:#a9b9bd;--card:#1d2c31;--line:#2e444b;--accent:#f4a261}}
+:root{--bg:#f2e8cf;--fg:#264653;--muted:#4f6b75;--card:#fbf6ea;--line:#e0d3b4;--accent:#c4472b;--code:#264653;--codefg:#f2e8cf}
+@media(prefers-color-scheme:dark){:root{--bg:#172226;--fg:#f2e8cf;--muted:#a9b9bd;--card:#1d2c31;--line:#2e444b;--accent:#f4a261;--code:#0f181b;--codefg:#f2e8cf}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,sans-serif}
 main{max-width:720px;margin:0 auto;padding:64px 16px}
-h1{font-size:2.4rem;margin:0 0 8px}
-p.lead{color:var(--muted);margin:0 0 40px}
+h1{font-size:2.4rem;margin:0 0 8px;display:flex;align-items:center;gap:12px}
+h1 img{width:44px;height:44px}
+h2.s{font-size:1.1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:40px 0 12px}
+p.lead{color:var(--muted);margin:0}
 .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin-bottom:16px;color:inherit;text-decoration:none}
-.card:hover{border-color:var(--accent)}
-.card h2{margin:0 0 4px;font-size:1.2rem;color:var(--accent)}
+a.card:hover,a.card:focus-visible{border-color:var(--accent)}
+.card h3{margin:0 0 4px;font-size:1.2rem;color:var(--accent)}
 .card p{margin:0;color:var(--muted)}
+.card small{display:block;margin-top:8px;color:var(--muted)}
+.coins{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.coin{text-align:center}
+.coin img{width:180px;height:180px;max-width:100%;background:#fff;border-radius:8px;padding:6px}
+code.addr{display:block;word-break:break-all;background:var(--code);color:var(--codefg);border-radius:6px;padding:8px;font-size:.78rem;margin:10px 0}
+button,.btn{font:inherit;font-size:.9rem;background:var(--accent);color:var(--bg);border:0;border-radius:6px;padding:6px 12px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.alt{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 footer{margin-top:40px;color:var(--muted);font-size:.9rem}
 a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 </head>
 <body>
 <main>
-<h1>LimitedIO</h1>
-<p class="lead">Small, free, open-source software.</p>
+<header>
+<h1><img src="assets/logo.svg" alt="" width="44" height="44">LimitedIO</h1>
+<p class="lead">Small, free, open-source software. No ads, no accounts, no tracking.</p>
+</header>
 
+<section aria-labelledby="projects">
+<h2 class="s" id="projects">Projects</h2>
 <a class="card" href="https://limitedio.github.io/aicswitch/">
-<h2>aicswitch</h2>
-<p>Fixes AIC8800 WiFi 6 + Bluetooth USB dongles on Linux that show up as a mass-storage drive. One-command install.</p>
+<h3>aicswitch</h3>
+<p>Fixes AIC8800 / AIC8800D80 WiFi 6 + Bluetooth USB dongles on Linux that show up as a mass-storage drive. One-command install.</p>
+<small>Linux · WiFi · Bluetooth</small>
 </a>
-
-<a class="card" href="https://github.com/LimitedIO/PipeTv">
-<h2>PipeTv</h2>
+<a class="card" href="https://limitedio.github.io/PipeTv/">
+<h3>PipeTv</h3>
 <p>Ad-free YouTube for Android TV, Google TV and Fire TV. No account, no Google services, SponsorBlock built in.</p>
+<small>Android TV · Fire TV · APK</small>
 </a>
+</section>
 
-<footer>All projects on <a href="https://github.com/LimitedIO">GitHub</a>.</footer>
+<section aria-labelledby="donate-h" id="donate">
+<h2 class="s" id="donate-h">Support</h2>
+<p class="lead" id="donate-p">Everything here is free and always will be. If it helped you, a small crypto tip keeps development going. No sign-up, no tracking.</p>
+<div class="coins" style="margin-top:16px">
+<div class="card coin"><h3>Monero</h3><small>XMR · recommended · private</small>
+<img src="assets/donate-xmr.svg" alt="Monero donation QR code" width="180" height="180" loading="lazy">
+<code class="addr">49H8xQ538uPf8dwmUCmq9GScNAZhMh6H51TQWTTcY5p4aXdg71z9raG16yGnaU1PGHWDg7doEmR3GfhVEniBMDb88fut64j</code>
+<button class="copy" data-addr="49H8xQ538uPf8dwmUCmq9GScNAZhMh6H51TQWTTcY5p4aXdg71z9raG16yGnaU1PGHWDg7doEmR3GfhVEniBMDb88fut64j">Copy address</button> <a class="btn alt" href="monero:49H8xQ538uPf8dwmUCmq9GScNAZhMh6H51TQWTTcY5p4aXdg71z9raG16yGnaU1PGHWDg7doEmR3GfhVEniBMDb88fut64j">Open wallet</a></div>
+<div class="card coin"><h3>Bitcoin</h3><small>BTC · native SegWit</small>
+<img src="assets/donate-btc.svg" alt="Bitcoin donation QR code" width="180" height="180" loading="lazy">
+<code class="addr">bc1qsghvgn84rmkjr3fjgc7gvkt4fqsxde6uk50ave</code>
+<button class="copy" data-addr="bc1qsghvgn84rmkjr3fjgc7gvkt4fqsxde6uk50ave">Copy address</button> <a class="btn alt" href="bitcoin:bc1qsghvgn84rmkjr3fjgc7gvkt4fqsxde6uk50ave">Open wallet</a></div>
+</div>
+</section>
+
+<footer>All code on <a href="https://github.com/LimitedIO">GitHub</a> · © LimitedIO</footer>
 </main>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+navigator.clipboard.writeText(b.dataset.addr).then(function(){var t=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=t},1500)})})})
+</script>
 </body>
 </html>
